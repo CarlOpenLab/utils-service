@@ -28,8 +28,11 @@
   "exclude": [
     "test/**/*",
     "node_modules/**/*",
-    "rollup.config.js",
     "types/**/*",
-    "vitest.config.ts"
+    "rslib.config.ts",
+    "rstest.config.ts",
+    "rslint.config.ts",
+    "rspress.config.ts",
+    "docs/**/*"
   ]
 }

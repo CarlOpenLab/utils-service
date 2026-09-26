@@ -1,15 +1,15 @@
-import { describe, vitest, afterEach, vi, test, expect } from 'vitest';
+import { describe, rs, afterEach, test, expect } from '@rstest/core';
 import { getCPUSerialNumber } from '../src/lib/os';
 
-vi.mock('child_process', () => {
+rs.mock('node:child_process', () => {
   return {
-    execSync: vi.fn(() =>'serialNumber'),
+    execSync: rs.fn(() =>'serialNumber'),
   }
 })
 
 describe('getCPUSerialNumber', () => {
   afterEach(() => {
-    vitest.restoreAllMocks();
+    rs.restoreAllMocks();
   });
 
   test('should return the CPU serial number on Windows', () => {

@@ -22,7 +22,7 @@ export function getPackageManager() {
   const packageInfo = process.env.npm_config_user_agent || '';
 
   const managerAndVersionInfo = packageInfo.split(' ')[0];
-  let [packageManager] = managerAndVersionInfo.split('/')
+  const [packageManager] = managerAndVersionInfo.split('/')
 
   return packageManager || 'npm'
 }

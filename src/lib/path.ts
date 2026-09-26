@@ -32,7 +32,7 @@ export async function findFilePath(path: string, fileName: string): Promise<stri
   if (fileName === void 0) {
     throw new Error('fileName is required')
   }
-  let curPath: string = resolve(path, fileName)
+  const curPath: string = resolve(path, fileName)
 
   if (existsSync(curPath)) {
     return curPath

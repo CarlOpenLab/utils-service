@@ -1,4 +1,4 @@
-import { describe, it, expect, vi } from 'vitest'
+import { describe, it, expect, rs } from '@rstest/core'
 import { cwdJoin, resolveCurrentPath, findPackagePath } from '../src/lib/path'
 import { fileURLToPath } from 'url'
 import { resolve } from 'path'
@@ -10,7 +10,7 @@ describe('path modules', () => {
   })
 
   it('join path from current workspace path', () => {
-    process.cwd = vi.fn(() => '/Users/heart/mock')
+    process.cwd = rs.fn(() => '/Users/heart/mock')
     expect(cwdJoin('./testPath')).toBe('/Users/heart/mock/testPath')
   })
 

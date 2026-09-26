@@ -5,3 +5,6 @@ publish.sh
 .vscode
 
 dist/
+doc_build/
+docs/api/
+.rspress/

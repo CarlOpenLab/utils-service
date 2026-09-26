@@ -5,7 +5,7 @@
     "experimentalDecorators": true,
     "emitDecoratorMetadata": true,
     "module": "ESNext",
-    "moduleResolution": "node",
+    "moduleResolution": "Bundler",
     "allowJs": false,
     "downlevelIteration": true,
     "importHelpers": true,
@@ -27,7 +27,8 @@
   "exclude": [
     "__test__/**/*",
     "node_modules/**/*",
-    "rollup.config.js",
-    "types/**/*"
+    "types/**/*",
+    "docs/**/*",
+    "doc_build/**/*"
   ]
 }
